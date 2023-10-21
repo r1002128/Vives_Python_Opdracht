@@ -10,8 +10,12 @@ class Database:
 		self.cursor = self.dbConnectie.cursor()
 
 	def run_query(self,query):
-		self.cursor.execute(query)
-		self.dbConnectie.commit()
+		try:
+			self.cursor.execute(query)
+			self.dbConnectie.commit()
+			print('Query uitgevoerd.')
+		except e:
+			print(e)
 
 	def return_query_results(self,query):
 		self.cursor.execute(query)

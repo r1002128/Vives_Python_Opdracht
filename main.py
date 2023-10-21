@@ -4,9 +4,11 @@ import sys
 from app.commands import Commands
 
 
-script_naam, command_name = sys.argv
+script_naam, command_name, abbrev_id, abbrev_text = sys.argv
 
 
 commands = Commands('./data/car_crashes.db')
 
-commands.get_abbrev_by_id('1')
+
+if command_name == 'add':
+		commands.add_abbrev(abbrev_id,abbrev_text)
