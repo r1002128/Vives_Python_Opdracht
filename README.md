@@ -5,4 +5,3 @@
 ## Introductie
 Deze opdracht is in functie van het vak Programming in Python waar we op zelfstandige basis een Python toepassing moeten bouwen op basis van gegeven criteria.
 
-
