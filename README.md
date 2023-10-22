@@ -6,6 +6,7 @@ khena.jacobs@student.vives.be
 
 ## Versioning
 0.1.0 Initial setup
+
 0.2.0 Adding all missing commands & finalize README.md
 
 ## Introductie
