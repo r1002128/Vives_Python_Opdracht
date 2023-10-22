@@ -1,26 +1,29 @@
 import sqlite3
 
 class Database:
-	def __init__(self,dbPath):
-		try:
-			self.dbConnectie = sqlite3.connect(dbPath)
-		except:
-			print("De database kon niet gevonden worden.")
+	def __init__(self, db_path):
+		self.db_path = db_path
+		self.connection = None
 
-		self.cursor = self.dbConnectie.cursor()
+	def connect(self):
+		if self.connection is None:
+			self.connection = sqlite3.connect(self.db_path)
+		return self.connection
+
+	def close(self):
+		if self.connection is not None:
+			self.connection.close()
+			self.connection = None
 
 	def run_query(self,query):
-		try:
-			self.cursor.execute(query)
-			self.dbConnectie.commit()
-			print('Query uitgevoerd.')
-		except e:
-			print(e)
+		connection = self.connect()
+		cursor = connection.cursor()	
+		cursor.execute(query)
+		connection.commit()
+		return cursor
 
 	def return_query_results(self,query):
-		self.cursor.execute(query)
-		return self.cursor.fetchall()
-
-	def close():
-		self.dbConnectie.close()
-
+		cursor = self.run_query(query)
+		result = cursor.fetchall()
+		cursor.close()
+		return result
