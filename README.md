@@ -34,6 +34,9 @@ Het get-commando wordt gebruikt om een specifieke rij uit de database op te vrag
 
 Met het add-commando kunnen nieuwe gegevens aan de database worden toegevoegd. De gebruiker geeft een ID en initialen op (bestaande uit exact 2 karakters). Er wordt alleen gecontroleerd op de lengte van de initialenstring om ervoor te zorgen dat deze precies 2 karakters bevat. Andere validaties worden niet uitgevoerd voor dit voorbeeld.
 
+### Validatie van command
+Om te kunnen bevestigen of een rij toegevoegd is aan de database, kan er gewerkt worden met een DB Browser naar keuze. Er wordt voor deze opgave enkel een oplossing aangeboden om in de tabel 'Abbrev' waarden toe te voegen. Ga na of we de ingegeven ID en afkorting kunnen terugvinden in deze tabel.
+
 ## Export
 
 Het export-commando wordt gebruikt om gegevens uit een specifieke tabel van de database naar een CSV-bestand te exporteren. De gebruiker geeft een bestandsnaam en een tabelnaam op. Het systeem zorgt ervoor dat de bestandsnaam altijd eindigt op ".csv" om een correct CSV-bestand te genereren.
