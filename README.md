@@ -6,6 +6,7 @@ khena.jacobs@student.vives.be
 
 ## Versioning
 0.1.0 Initial setup
+
 0.2.0 Adding all missing commands & finalize README.md
 0.3.0 Update to README and improve user input error handling
 
