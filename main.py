@@ -15,11 +15,11 @@ if command_name != 'add' and command_name != 'get' and command_name != 'export':
 
 if command_name == 'add':
 		abbrev_text = input("Wat is de afkorting die je wilt toevoegen? Bestaan uit 2 initialen in uppercase: ")
-		abbrev_id = input("Geef een ID mee: ")
 		#Ik had hier eventueel nog een check kunnen schrijven zodat er enkel letters zijn, 
 		#maar ik ga er van uit dat dit out-of-scope if voor de opdracht.
 		while len(abbrev_text) != 2:
 			abbrev_text = input("Gelieve een correcte input mee te geven. De afkorting bestaat uit 2 characters: ")
+		abbrev_id = input("Geef een ID mee: ")
 		commands.add_abbrev(abbrev_id,abbrev_text)
 		commands.close()
 if command_name == 'get':

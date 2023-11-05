@@ -21,6 +21,7 @@ class Commands:
 		VALUES ('{abbrev_id}', '{abbrev_text}');
 		"""
 		self.db.run_query(query)
+		print(f'Succesvol toegevoegd aan table "Abbrev": [{abbrev_id}, {abbrev_text}]')
 
 	def export_table_to_csv_file(self, csv_file, table_name):
 		query = f"SELECT * FROM {table_name};"
